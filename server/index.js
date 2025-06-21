@@ -19,10 +19,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect(process.env.MONGODB_URI)
 .then(() => console.log('Connected to MongoDB'))
 .catch((err) => console.error('MongoDB connection error:', err));
 
@@ -55,6 +52,18 @@ app.get('/api/books', async (req, res) => {
     res.json(books);
   } catch (err) {
     res.status(500).json({ error: err.message });
+  }
+});
+
+// Get a single book by ID
+app.get('/api/books/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const book = await Book.findById(id);
+    if (!book) return res.status(404).json({ error: 'Book not found' });
+    res.json(book);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
   }
 });
 

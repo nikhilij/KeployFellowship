@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Book Manager",
-  description: "A simple book management application to create, read, update, and delete books",
+  title: "Book Collection Manager",
+  description: "Manage your book collection with this application",
 };
 
 export default function RootLayout({ children }) {

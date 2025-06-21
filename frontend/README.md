@@ -1,50 +1,42 @@
-# Book CRUD Next.js App
+# Book Collection Manager Frontend
 
-This is a Next.js app (JavaScript) using shadcn/ui and Tailwind CSS. It provides a modern, accessible CRUD interface for a Book resource (title, author, publishedYear) using the backend API endpoints:
-- POST /api/books
-- GET /api/books
-- PUT /api/books/:id
-- DELETE /api/books/:id
+This is the frontend for the Book Collection Manager application built with Next.js.
 
 ## Features
-- Add, edit, and delete books
-- Clean, accessible UI with shadcn/ui components
-- All API calls use fetch and handle errors gracefully
+
+- View all books in the collection
+- Add new books to the collection
+- Edit existing book details
+- Delete books from the collection
 
 ## Getting Started
+
+### Prerequisites
+
+- Node.js 16+ 
+- Backend server running (see `/server` directory)
+
+### Setup
 
 1. Install dependencies:
-   ```bash
-   npm install
-   ```
-2. Run the development server:
-   ```bash
-   npm run dev
-   ```
-3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Customization
-- Edit `src/app/page.js` to modify the Book CRUD UI.
-- shadcn/ui components are in `src/components/ui/`.
+```bash
+cd frontend
+npm install
+```
 
----
+2. Configure environment variables:
 
-For backend API setup, see the main project README.
+Create a `.env.local` file if it doesn't exist with the following content:
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+```
+NEXT_PUBLIC_API_URL=http://localhost:5000
+```
 
-## Getting Started
-
-First, run the development server:
+3. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
