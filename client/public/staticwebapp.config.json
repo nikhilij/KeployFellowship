@@ -1,15 +1,19 @@
 {
-  "routes": [
-    {
-      "route": "/*",
-      "rewrite": "/index.html"
+    "routes": [
+        {
+            "route": "/*",
+            "rewrite": "/index.html"
+        }
+    ],
+    "navigationFallback": {
+        "rewrite": "/index.html",
+        "exclude": [
+            "/images/*.{png,jpg,gif}",
+            "/css/*",
+            "/_next/*"
+        ]
+    },
+    "mimeTypes": {
+        ".json": "application/json"
     }
-  ],
-  "navigationFallback": {
-    "rewrite": "/index.html",
-    "exclude": ["/images/*.{png,jpg,gif}", "/css/*", "/_next/*"]
-  },
-  "mimeTypes": {
-    ".json": "application/json"
-  }
 }

@@ -28,7 +28,7 @@ jobs:
               action: "upload"
               app_location: "/client" # Your Next.js app in client folder
               api_location: "" # Empty unless using Azure Functions
-              output_location: "out" # Static export output directory
+              output_location: ".next" # Next.js build output
            env:
               NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
 
