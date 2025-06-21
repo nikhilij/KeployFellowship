@@ -27,7 +27,8 @@ jobs:
               repo_token: ${{ secrets.GITHUB_TOKEN }}
               action: "upload"
               app_location: "/client" # Your Next.js app in client folder
-              api_location: "" # Empty unless using Azure Functions              output_location: ".next" # Change to "out" if using next export
+              api_location: "" # Empty unless using Azure Functions
+              output_location: "out" # Static export output directory
            env:
               NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
 
