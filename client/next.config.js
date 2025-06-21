@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-   trailingSlash: true,
-   images: {
-      unoptimized: true,
-   },
+  output: 'standalone',
+  reactStrictMode: true,
+  env: {
+    NEXT_PUBLIC_API_BASE_URL: process.env.NEXT_PUBLIC_API_BASE_URL,
+  },
 };
 
 export default nextConfig;

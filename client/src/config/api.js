@@ -1,18 +1,18 @@
 // Environment configuration
 const config = {
    development: {
-      API_URL: "http://localhost:3001", // Local development server
+      API_URL: process.env.NEXT_PUBLIC_API_URL, // Use environment variable only
    },
    production: {
-      API_URL: "https://bookmanager-hzfmeaaqfeahavb9.eastus-01.azurewebsites.net",
+      API_URL: process.env.NEXT_PUBLIC_API_URL,
    },
 };
 
 // Get environment
 const environment = process.env.NODE_ENV || "development";
 
-// Get API URL from environment variable or fallback to config
-export const API_URL = process.env.NEXT_PUBLIC_API_URL || config[environment]?.API_URL || config.production.API_URL;
+// Get API URL from environment variable only
+export const API_URL = config[environment]?.API_URL;
 
 // Debug logging (remove in production)
 if (process.env.NODE_ENV !== "production") {
