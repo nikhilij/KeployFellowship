@@ -18,7 +18,7 @@ npm install
 ### 2. Configure Environment
 Create a `.env` file in the `server` directory (already provided):
 ```
-MONGODB_URI=mongodb+srv://developernikhilsoni973:3wcWtTwF9lcKw7OJ@cluster0.8fbif.mongodb.net/?retryWrites=true&w=majority
+MONGODB_URI=your-uri
 PORT=5000
 ```
 
