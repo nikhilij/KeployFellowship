@@ -6,6 +6,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
 
+// Debug logging to check environment variable
+console.log("API_URL from env:", API_URL);
+console.log("Environment variables:", process.env.NEXT_PUBLIC_API_URL);
+
 export default function Home() {
   const [books, setBooks] = useState([]);
   const [form, setForm] = useState({ title: "", author: "", publishedYear: "" });
