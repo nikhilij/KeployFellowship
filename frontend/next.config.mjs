@@ -4,7 +4,10 @@ const nextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true
-  }
+  },
+  distDir: 'out',
+  basePath: '',
+  assetPrefix: ''
 };
 
 export default nextConfig;
