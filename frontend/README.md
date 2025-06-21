@@ -1,19 +1,49 @@
 # Book Collection Manager Frontend
 
-This is the frontend for the Book Collection Manager application built with Next.js.
+This is the frontend for the Book Collection Manager application built with Next.js and deployed on Azure App Service.
 
-## Features
+## 🚀 Live Demo
 
-- View all books in the collection
-- Add new books to the collection
-- Edit existing book details
-- Delete books from the collection
+**Live Application**: [https://bookcollection-frontend.azurewebsites.net](https://bookcollection-frontend.azurewebsites.net)
 
-## Getting Started
+## 📸 Application Screenshot
+
+![Book Collection Manager Screenshot](./screenshots/app-screenshot.png)
+
+*The application running on Azure App Service with Node.js 20*
+
+## ✨ Features
+
+- 📚 View all books in the collection
+- ➕ Add new books to the collection
+- ✏️ Edit existing book details
+- 🗑️ Delete books from the collection
+- 🌐 Responsive design with TailwindCSS
+- ⚡ Fast performance with Next.js 15
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15.3.4
+- **Runtime**: Node.js 20
+- **Styling**: TailwindCSS 3.4.16
+- **Deployment**: Azure App Service
+- **Infrastructure**: Azure Bicep
+
+## 🌐 Deployment
+
+This application is deployed on **Azure App Service** using **Azure Developer CLI (azd)**.
+
+### Azure Infrastructure
+
+- **App Service Plan**: Linux-based with Node.js 20
+- **App Service**: Configured with managed identity and CORS
+- **Environment**: Production-ready with custom domain support
+
+## 🚦 Getting Started
 
 ### Prerequisites
 
-- Node.js 16+ 
+- Node.js 20+ 
 - Backend server running (see `/server` directory)
 
 ### Setup
@@ -27,10 +57,15 @@ npm install
 
 2. Configure environment variables:
 
-Create a `.env.local` file if it doesn't exist with the following content:
+Create a `.env.local` file for local development:
 
-```
+```env
 NEXT_PUBLIC_API_URL=http://localhost:5000
+```
+
+For production (Azure), the environment variable is automatically configured:
+```env
+NEXT_PUBLIC_API_URL=https://bookmanager-hzfmeaaqfeahavb9.eastus-01.azurewebsites.net
 ```
 
 3. Run the development server:
@@ -45,17 +80,54 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## 🚀 Azure Deployment
 
-To learn more about Next.js, take a look at the following resources:
+This application is deployed using Azure Developer CLI (azd):
+
+```bash
+# Initialize Azure Developer CLI
+azd init
+
+# Deploy to Azure
+azd up
+```
+
+### Infrastructure as Code
+
+The infrastructure is defined using Azure Bicep templates:
+- `infra/main.bicep` - Main infrastructure template
+- `infra/main.parameters.json` - Deployment parameters
+
+### Deployment Features
+
+- ✅ **Node.js 20 Runtime**
+- ✅ **Automatic SSL/TLS**
+- ✅ **Custom Domain Support**
+- ✅ **Managed Identity**
+- ✅ **CORS Configuration**
+- ✅ **Environment Variables**
+
+## 📚 Learn More
+
+To learn more about the technologies used:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Azure App Service](https://docs.microsoft.com/azure/app-service/) - learn about Azure App Service.
+- [Azure Developer CLI](https://docs.microsoft.com/azure/developer/azure-developer-cli/) - learn about azd.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🤝 Contributing
 
-## Deploy on Vercel
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is part of the Keploy Fellowship program.
+
+---
+
+**Deployed with ❤️ on Azure App Service using Node.js 20**

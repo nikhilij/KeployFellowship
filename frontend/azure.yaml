@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+name: bookmanager-frontend
+metadata:
+  template: bookmanager-frontend@0.0.1-beta
+services:
+  frontend:
+    project: ./
+    language: js
+    host: appservice
+    hooks:
+      prebuild:
+        shell: sh
+        run: |
+          echo "Installing dependencies..."
+          npm install
+      build:
+        shell: sh
+        run: |
+          echo "Building the application..."
+          npm run build
