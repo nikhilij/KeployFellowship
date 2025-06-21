@@ -1,0 +1,24 @@
+# Node modules (all modules and submodules)
+node_modules/
+**/node_modules/
+
+# Build folders (common names)
+build/
+dist/
+out/
+**/build/
+**/dist/
+**/out/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.*
+
+# Coverage directory
+coverage/
+**/coverage/
