@@ -1,0 +1,28 @@
+{
+  "name": "keploy-api-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch src/server.js",
+    "test": "set NODE_ENV=test&& node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --forceExit",
+    "test:unit": "set NODE_ENV=test&& node --experimental-vm-modules node_modules/jest/bin/jest.js tests/unit --detectOpenHandles --forceExit",
+    "test:integration": "set NODE_ENV=test&& node --experimental-vm-modules node_modules/jest/bin/jest.js tests/integration --detectOpenHandles --forceExit",
+    "test:api": "set NODE_ENV=test&& node --experimental-vm-modules node_modules/jest/bin/jest.js tests/api --detectOpenHandles --forceExit",
+    "test:coverage": "set NODE_ENV=test&& node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage --detectOpenHandles --forceExit",
+    "test:watch": "set NODE_ENV=test&& node --experimental-vm-modules node_modules/jest/bin/jest.js --watch --detectOpenHandles"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.3.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "mongodb-memory-server": "^9.1.3",
+    "@jest/globals": "^29.7.0"
+  }
+}
